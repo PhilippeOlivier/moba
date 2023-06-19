@@ -217,7 +217,7 @@ for rotation1 in range(NUM_ROTATIONS-1):
                             common_heroes[hero])
             model.AddImplication(common_heroes[hero], rotations[rotation1][hero])
             model.AddImplication(common_heroes[hero], rotations[rotation2][hero])
-            model.Add(cp_model.LinearExpr.Sum(common_heroes) <= ROTATION_SIZE - UNIQUE)
+        model.Add(cp_model.LinearExpr.Sum(common_heroes) <= ROTATION_SIZE - UNIQUE)
 
 # Cho and Gall have to be in the same rotations
 NAMES = list(HEROES.keys())
